@@ -10,7 +10,7 @@ export default async function Home() {
     query:'',
     category:'',
     page:1,
-    limit:6
+    limit:10
   });
 
   return (
@@ -19,11 +19,10 @@ export default async function Home() {
         <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
           <div className=" flex flex-col justify-center  gap-8">
             <h1 className="h1-bold">
-              Genenate Awesome Ai Avatars From Your Face
+            Online Realistic AI Avatar Generator
             </h1>
             <p className="p-regular-20 md:p-regular-24">
-              Just select style and upload your randome selfies, just wait we
-              will give you an awesome realistic ai avatar{" "}
+            Create an AI avatar that looks just like you using the Pixa AI avatar generator online. Get your first AI avatar from a photo in seconds today!{" "}
             </p>
             <Button size="lg" asChild className="button w-full sm:w-fit">
               <Link href="#events">Generate Now</Link>
@@ -53,7 +52,7 @@ data={events?.data}
 emptyTitle="No Events Found"
 emptyStateSubtext="Come Back Later"
 collectionType="All_Events"
-limit={6}
+limit={10}
 page={1}
 totalPages={2}
 ></Collection>

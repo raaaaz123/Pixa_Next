@@ -11,7 +11,7 @@ const Header = () => {
       <div className="wrapper flex items-center justify-between">
         <Link href="/" className="w-36">
           <Image 
-            src="/assets/images/logo.png" width={148} height={58}
+            src="/assets/images/logo.png" width={188} height={78}
             alt="Evently logo" 
           />
         </Link>

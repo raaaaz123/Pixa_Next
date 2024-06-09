@@ -4,7 +4,7 @@ export const headerLinks = [
       route: '/',
     },
     {
-      label: 'Create Event',
+      label: 'Create Avatar',
       route: '/events/create',
     },
     {
@@ -14,10 +14,10 @@ export const headerLinks = [
   ]
   
   export const eventDefaultValues = {
-    title: '',
-    description: '',
-    location: '',
-    imageUrl: '',
+    prompt: '',
+    nprompt: '',
+    gender: '',
+    url1: '',
     startDateTime: new Date(),
     endDateTime: new Date(),
     categoryId: '',

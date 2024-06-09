@@ -19,10 +19,10 @@ export type UpdateUserParams = {
 export type CreateEventParams = {
   userId: string
   event: {
-    title: string
-    description: string
-    location: string
-    imageUrl: string
+    prompt: string
+    nprompt: string
+    gender: string
+    url1: string
     startDateTime: Date
     endDateTime: Date
     categoryId: string
@@ -37,10 +37,10 @@ export type UpdateEventParams = {
   userId: string
   event: {
     _id: string
-    title: string
-    imageUrl: string
-    description: string
-    location: string
+    prompt: string
+    nprompt: string
+    gender: string
+    url1: string
     startDateTime: Date
     endDateTime: Date
     categoryId: string
@@ -78,14 +78,15 @@ export type GetRelatedEventsByCategoryParams = {
 
 export type Event = {
   _id: string
-  title: string
-  description: string
-  price: string
-  isFree: boolean
-  imageUrl: string
-  location: string
+  prompt: string
+  nprompt: string
+  gender: string
+  url1: string
   startDateTime: Date
   endDateTime: Date
+  categoryId: string
+  price: string
+  isFree: boolean
   url: string
   organizer: {
     _id: string

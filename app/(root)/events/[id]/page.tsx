@@ -10,7 +10,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
   const event = await getEventById(id);
 
   const relatedEvents = await getRelatedEventsByCategory({
-    categoryId: event.category._id,
+    categoryId: "66656620051227048189286a",
     eventId: event._id,
     page: searchParams.page as string,
   })
@@ -20,11 +20,11 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
     <section className="flex justify-center bg-primary-50 bg-dotted-pattern bg-contain">
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:max-w-7xl">
         <Image 
-          src={event.imageUrl}
+          src={event.url1}
           alt="hero image"
           width={1000}
           height={1000}
-          className="h-full min-h-[300px] object-cover object-center"
+          className="h-full min-h-[200px] object-cover object-center"
         />
 
         <div className="flex w-full flex-col gap-8 p-5 md:p-10">
@@ -37,14 +37,11 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
                   {event.isFree ? 'FREE' : `$${event.price}`}
                 </p>
                 <p className="p-medium-16 rounded-full bg-grey-500/10 px-4 py-2.5 text-grey-500">
-                  {event.category.name}
+                  {"event.category.name"}
                 </p>
               </div>
 
-              <p className="p-medium-18 ml-2 mt-2 sm:mt-0">
-                by{' '}
-                <span className="text-primary-500">{event.organizer.firstName} {event.organizer.lastName}</span>
-              </p>
+              
             </div>
           </div>
 

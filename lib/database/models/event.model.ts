@@ -2,11 +2,11 @@ import { Document, Schema, model, models } from "mongoose";
 
 export interface IEvent extends Document {
   _id: string;
-  title: string;
-  description?: string;
-  location?: string;
+  prompt: string;
+  nprompt?: string;
+  gender?: string;
   createdAt: Date;
-  imageUrl: string;
+url1: string;
   startDateTime: Date;
   endDateTime: Date;
   price: string;
@@ -17,11 +17,11 @@ export interface IEvent extends Document {
 }
 
 const EventSchema = new Schema({
-  title: { type: String, required: true },
-  description: { type: String },
-  location: { type: String },
+  prompt: { type: String, required: true },
+  nprompt: { type: String },
+  gender: { type: String },
   createdAt: { type: Date, default: Date.now },
-  imageUrl: { type: String, required: true },
+  url1: { type: String, required: true },
   startDateTime: { type: Date, default: Date.now },
   endDateTime: { type: Date, default: Date.now },
   price: { type: String },

@@ -14,7 +14,7 @@ import {
   DeleteEventParams,
   GetAllEventsParams,
   GetEventsByUserParams,
-  GetRelatedEventsByCategoryParams
+  GetRelatedEventsByCategoryParams,
   
 } from '@/types'
 import { connectToDatabase } from '../database'

@@ -5,25 +5,22 @@ import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import DatePicker from "react-datepicker";
+import { eventFormSchema } from "@/lib/validator"
 import * as z from 'zod'
 import { eventDefaultValues } from "@/constants"
-
+import Dropdown from "./Dropdown"
 import { Textarea } from "@/components/ui/textarea"
 import { FileUploader } from "./FileUploader"
 import { useState } from "react"
 import Image from "next/image"
-
+import DatePicker from "react-datepicker";
 import { useUploadThing } from '@/lib/uploadthing'
 
 import "react-datepicker/dist/react-datepicker.css";
 import { Checkbox } from "../ui/checkbox"
 import { useRouter } from "next/navigation"
-
-import { IEvent } from "@/lib/database/models/event.model"
-import { eventFormSchema } from "@/lib/validator"
-import Dropdown from "./Dropdown"
 import { createEvent, updateEvent } from "@/lib/actions/event.actions"
+import { IEvent } from "@/lib/database/models/event.model"
 
 
 type EventFormProps = {
@@ -52,7 +49,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
   })
  
   async function onSubmit(values: z.infer<typeof eventFormSchema>) {
-    let uploadedImageUrl = values.imageUrl;
+    let uploadedImageUrl = values.url1;
 
     if(files.length > 0) {
       const uploadedImages = await startUpload(files)
@@ -67,14 +64,14 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
     if(type === 'Create') {
       try {
         const newEvent = await createEvent({
-          event: { ...values, imageUrl: uploadedImageUrl },
+          event: { ...values, url1: uploadedImageUrl },
           userId,
           path: '/profile'
         })
 
         if(newEvent) {
           form.reset();
-          router.push(`/events/${newEvent._id}`)
+          router.push(`/eventsnew/${newEvent._id}`)
         }
       } catch (error) {
         console.log(error);
@@ -90,13 +87,13 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
       try {
         const updatedEvent = await updateEvent({
           userId,
-          event: { ...values, imageUrl: uploadedImageUrl, _id: eventId },
-          path: `/events/${eventId}`
+          event: { ...values, url1: uploadedImageUrl, _id: eventId },
+          path: `/eventsnew/${eventId}`
         })
 
         if(updatedEvent) {
           form.reset();
-          router.push(`/events/${updatedEvent._id}`)
+          router.push(`/eventsnew/${updatedEvent._id}`)
         }
       } catch (error) {
         console.log(error);
@@ -110,7 +107,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
         <div className="flex flex-col gap-5 md:flex-row">
           <FormField
             control={form.control}
-            name="title"
+           name="prompt"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
@@ -137,7 +134,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
         <div className="flex flex-col gap-5 md:flex-row">
           <FormField
               control={form.control}
-              name="description"
+              name="nprompt"
               render={({ field }) => (
                 <FormItem className="w-full">
                   <FormControl className="h-72">
@@ -149,7 +146,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
             />
           <FormField
               control={form.control}
-              name="imageUrl"
+              name="url1"
               render={({ field }) => (
                 <FormItem className="w-full">
                   <FormControl className="h-72">
@@ -168,7 +165,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
         <div className="flex flex-col gap-5 md:flex-row">
           <FormField
               control={form.control}
-              name="location"
+              name="gender"
               render={({ field }) => (
                 <FormItem className="w-full">
                   <FormControl>
