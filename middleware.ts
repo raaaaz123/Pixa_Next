@@ -7,6 +7,8 @@ export const config = {
     '/((?!.*\\..*|_next).*)',
     '/',
     '/(api|trpc)(.*)',
-    '/api/uploadthing'
+    '/api/uploadthing',
+    '/',
+    '/events/:id',
   ],
 };
