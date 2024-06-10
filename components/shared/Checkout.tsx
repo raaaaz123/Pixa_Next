@@ -22,7 +22,7 @@ const Checkout = ({ event, userId }: { event: IEvent, userId: string }) => {
 
   const onCheckout = async () => {
     const order = {
-      eventTitle: event.title,
+      eventTitle: event.prompt,
       eventId: event._id,
       price: event.price,
       isFree: event.isFree,
