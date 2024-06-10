@@ -1,10 +1,19 @@
 
+
 import CheckoutButton from '@/components/shared/CheckoutButton';
 import Collection from '@/components/shared/Collection';
+import { Button } from '@/components/ui/button';
 import { getEventById, getRelatedEventsByCategory } from '@/lib/actions/event.actions'
 import { formatDateTime } from '@/lib/utils';
+import { Container, HStack, IconButton, Text, useColorMode, VStack } from "@chakra-ui/react";
 import { SearchParamProps } from '@/types'
 import Image from 'next/image';
+import Link from "next/link";
+import Cropper from '@/components/shared/Cropper';
+import { MdDarkMode } from 'react-icons/md';
+
+
+
 
 const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) => {
   const event = await getEventById(id);
@@ -45,7 +54,11 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
             </div>
           </div>
 
-          <CheckoutButton event={event} />
+          <Container maxW={"container.lg"} pt={3} >
+      
+      <Cropper />
+    </Container>
+
 
           <div className="flex flex-col gap-5">
             <div className='flex gap-2 md:gap-3'>
@@ -94,5 +107,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
     </>
   )
 }
+
+
 
 export default EventDetails
