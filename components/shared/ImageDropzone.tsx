@@ -19,7 +19,7 @@ export const useImageInput = ({ onPreparedImage }: UseImageInputProps) => {
   const toast = useToast();
   const { getRootProps, getInputProps } = useDropzone({
     onDropAccepted: ([file]) => onInput(file, file.name),
-    accept: "image/*",
+    
     multiple: false,
   });
 
