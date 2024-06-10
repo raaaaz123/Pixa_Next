@@ -19,15 +19,15 @@ const Collection = ({
   emptyTitle,
   emptyStateSubtext,
   page,
-  totalPages = 0,
+  totalPages = 2,
   collectionType,
   urlParamName,
 }: CollectionProps) => {
   return (
     <>
       {data.length > 0 ? (
-        <div className="flex flex-col items-center gap-5">
-          <ul className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:gap-5">
+        <div className="flex flex-col items-center gap-3">
+          <ul className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 xl:gap-5">
             {data.map((event) => {
               const hasOrderLink = collectionType === 'Events_Organized';
               const hidePrice = collectionType === 'My_Tickets';

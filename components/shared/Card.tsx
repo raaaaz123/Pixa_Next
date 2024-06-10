@@ -18,10 +18,11 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
   const isEventCreator = userId === "";
 
   return (
-    <div className="group relative flex min-h-[380px] w-full max-w-[300px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg md:min-h-[278px]">
+<div className="relative flex min-h-[300px] w-full max-w-[300px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg md:min-h-[278px]">
+  
       <Link
         href={`/events/${event._id}`}
-        className="link-background flex-grow bg-gray-50 bg-cover bg-center text-grey-500 md:min-h-[438px]"
+        className="link-background  flex-grow bg-gray-50 bg-cover bg-center text-grey-500 md:min-h-[338px]"
         style={{
           backgroundImage: `url(${event.url1})`,
           maxWidth: "100%",
