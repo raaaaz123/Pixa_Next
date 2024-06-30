@@ -17,6 +17,18 @@ p-5 text-center sm:flex-row'>
   </Link>
 
   <p> 2024 Pixa Ai. All Rights Reserved</p>
+
+  <Link href="/contact-us">
+   Contact Us
+  </Link>
+
+  <Link href="/terms-and-conditions">
+  Terms and Conditions
+  </Link>
+
+  <Link href="/refund-policy">
+  Refund Policy
+  </Link>
 </div>
    </footer>
   )

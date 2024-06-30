@@ -233,11 +233,11 @@ export const Cropper = () => {
   };
 
   return (
-    <div className={"flex justify-center pb-10 pt-5"}>
+    <div className={"flex p-50 items-center justify-center pb-10 pt-5 rounded bg-violet-200 row-auto" }>
       <div>
         <ImageDropzone onPreparedImage={onPreparedImage} visible={!imgRef.current} />
 
-        <ReactCrop
+        <ReactCrop className="start-10"
           imageStyle={{ maxHeight: 500 }}
           style={{ boxShadow: "black 0px 0px 10px" }}
           src={base64}
@@ -251,7 +251,7 @@ export const Cropper = () => {
 
         {imgRef.current && (
           <>
-            <div className={"pt-2 pb-1.5"} title={filename}>
+            <div className={"pt-2 pb-1.5 justify-center px-4"} title={filename}>
               {shortenedName} - {imgRef.current.naturalWidth}x{imgRef.current.naturalHeight}
             </div>
 

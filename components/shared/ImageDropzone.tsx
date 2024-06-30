@@ -61,7 +61,7 @@ export const ImageDropzone = ({ onPreparedImage, visible }: ImageDropzoneProps) 
         {...getRootProps()}
       >
         <input {...getInputProps()} />
-        <MdPhoto className="-ml-2.5" size={"96px"} />
+        <MdPhoto className="-ml-2.5 p-5 col-2" size={"96px"} />
         Click or drag an image here
       </div>
 
