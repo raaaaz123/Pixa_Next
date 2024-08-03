@@ -19,7 +19,7 @@ p-5 text-center sm:flex-row'>
 
   <div>
         <p>&copy; 2024 Pixa Ai. All rights reserved.</p>
-        <p>Address: Shoba Complex, 2nd floor, Karicode, Kollam 691005, Kerala INDIA</p>
+        <p>Address: MALIYAKKAL HOUSE, VELLOOR, VELLOOR, Malappuram, Pookkottur, Vellur, Kerala, India, 676517</p>
     </div>
 
 </div>
