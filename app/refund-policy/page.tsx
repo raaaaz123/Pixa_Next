@@ -1,77 +1,91 @@
+"use client";
 import React from 'react';
 
-const RefundAndCancellationPolicyPage: React.FC = () => {
+const RefundCancellationPolicy = () => {
   return (
-    <div className="container mx-auto p-5">
-      <h1 className="text-2xl font-bold mb-5">Refund and Cancellation Policy</h1>
-      <div className="text-sm mb-8">
-        <p className="mb-3">
-          Welcome to Pixa Ai's Refund and Cancellation Policy. This policy outlines our guidelines regarding refunds and cancellations of custom merchandise orders.
-        </p>
-        <p className="mb-3">
-          <strong>1. Refund Eligibility</strong>
-          <br />
-          Customers may be eligible for a refund under the following circumstances:
-          <ul className="list-disc ml-6 mb-3">
-            <li>Defective or incorrect merchandise received.</li>
-            <li>Order cancellation before production begins and approval is received.</li>
-          </ul>
-        </p>
-        <p className="mb-3">
-          <strong>2. Refund Timeframes</strong>
-          <br />
-          Refunds will be processed within 2-5 business days upon approval of the refund request.
-        </p>
-        <p className="mb-3">
-          <strong>3. Refund Request Process</strong>
-          <br />
-          Customers must submit a refund request by contacting our customer support team at <a href="mailto:rexatechin@gmail.com">rexatechin@gmail.com</a>. Please provide your order number and reason for the refund request.
-        </p>
-        <p className="mb-3">
-          <strong>4. Cancellation Procedures</strong>
-          <br />
-          Customers can cancel their order before production begins and approval is received. Once production has started, cancellations may not be possible.
-        </p>
-        <p className="mb-3">
-          <strong>5. Fees and Requirements</strong>
-          <br />
-          Pixa Ai reserves the right to charge a cancellation fee if applicable. Returned merchandise must be in its original condition and packaging to qualify for a refund.
-        </p>
-        <p className="mb-3">
-          <strong>6. Contact Us</strong>
-          <br />
-          If you have any questions about our Refund and Cancellation Policy, please contact us at <a href="mailto:rexatechin@gmail.com">rexatechin@gmail.com</a>.
-        </p>
+    <div className="container">
+      {/* Header */}
+      <div className="header">
+        <h1 className="header-title">Refund & Cancellation Policy</h1>
       </div>
 
-      <h1 className="text-2xl font-bold mb-5">Pricing Policy</h1>
-      <div className="text-sm">
-        <p className="mb-3">
-          Here at Pixa Ai, we strive to provide transparent pricing for all our products. Our pricing policy ensures clarity and fairness in all transactions.
-        </p>
-        <p className="mb-3">
-          <strong>1. Product Pricing</strong>
-          <br />
-          Prices listed on our website include all applicable taxes and fees. Any additional charges, such as shipping costs, will be clearly communicated at checkout.
-        </p>
-        <p className="mb-3">
-          <strong>2. Price Changes</strong>
-          <br />
-          Pixa Ai reserves the right to adjust product prices at any time. Price changes will not affect orders that have already been confirmed and processed.
-        </p>
-        <p className="mb-3">
-          <strong>3. Discounts and Promotions</strong>
-          <br />
-          From time to time, we may offer discounts and promotions on select products. Terms and conditions for each promotion will be clearly stated.
-        </p>
-        <p className="mb-3">
-          <strong>4. Contact Us</strong>
-          <br />
-          If you have any questions about our Pricing Policy, please contact us at <a href="mailto:rexatechin@gmail.com">rexatechin@gmail.com</a>.
-        </p>
+      {/* Scrollable Content */}
+      <div className="content">
+        <section className="section">
+          <h2 className="section-title">PAYMENTS</h2>
+          <p className="section-content">
+            Our app accepts Debit Cards, Credit Cards, NetBanking, & Wallets for payments.
+          </p>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">SHIPPING</h2>
+          <p className="section-content">
+            We offer shipping to cities all over India. Customers usually receive their orders within 7-8 working days. The customer is responsible for any import duty that may be levied upon their order.
+          </p>
+          <p className="section-content">
+            If you have any questions about the expected delivery period for your address, please contact us.
+          </p>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">RETURNS</h2>
+          <p className="section-content">
+            Our app offers a replacement guarantee only if the product received is damaged or defective. Please contact us within 3 days of receiving your order if you would like to have it replaced. We do not exchange products if the customer has ordered a wrong item.
+          </p>
+          <p className="section-content">
+            Return/exchange will not be applicable if the product is disliked by the customer or if a wrong product was ordered. Replacements or refunds can be requested if the item is physically damaged, has missing parts, is different from its description, or is defective. Proof must be provided through an unboxing video.
+          </p>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">CANCELLATION OF ORDERS</h2>
+          <p className="section-content">
+            You may request to cancel your order for a refund within 2 hours of placing the order. All cancellation requests will be accepted within 2 hours, and we will initiate a refund to your original payment method, deducting a Rs. 60 processing fee.
+          </p>
+          <p className="section-content">
+            Cancellations after 2 hours will not be accepted. If you placed an order without uploading a picture for a customized cover, we will email you for the picture. If no picture is provided within a week, the order will proceed without that particular cover, and no refund will be issued.
+          </p>
+        </section>
       </div>
+
+      <style jsx>{`
+        .container {
+          padding: 16px;
+          background-color: #ffffff;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        .header {
+          padding: 16px 0;
+          border-bottom: 1px solid #dddddd;
+        }
+        .header-title {
+          font-size: 24px;
+          font-weight: bold;
+          color: #333333;
+        }
+        .content {
+          margin-top: 16px;
+        }
+        .section {
+          margin-bottom: 24px;
+        }
+        .section-title {
+          font-size: 20px;
+          font-weight: bold;
+          color: #000000;
+          margin-bottom: 8px;
+        }
+        .section-content {
+          font-size: 16px;
+          color: #333333;
+          margin-bottom: 16px;
+          line-height: 1.5;
+        }
+      `}</style>
     </div>
   );
 };
 
-export default RefundAndCancellationPolicyPage;
+export default RefundCancellationPolicy;

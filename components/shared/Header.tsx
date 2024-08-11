@@ -31,16 +31,25 @@ const Header = () => {
             {/* Add any other components or elements for signed out users if needed */}
           </SignedOut>
 
-          <nav className="flex gap-2 sm:gap-4 text-sm sm:text-base">
-            <Link href="/contact-us" className="text-gray-700 font-bold hover:text-gray-900">
+          <nav className="flex gap-4 sm:gap-4 text-sm sm:text-base">
+
+          <Link href="/about-us" className="text-gray-700  hover:text-gray-900">
+              About Us
+            </Link>
+            <Link href="/contact-us" className="text-gray-700  hover:text-gray-900">
               Contact Us
             </Link>
-            <Link href="/terms-and-conditions" className="text-gray-700 font-bold hover:text-gray-900">
+            <Link href="/privacy-policy" className="text-gray-700  hover:text-gray-900">
+             Privacy Policy
+            </Link>
+            <Link href="/terms-and-conditions" className="text-gray-700  hover:text-gray-900">
               Terms and Conditions
             </Link>
-            <Link href="/refund-policy" className="text-gray-700 font-bold hover:text-gray-900">
-              Refund Policy
+            <Link href="/refund-policy" className="text-gray-700  hover:text-gray-900">
+            Refund & Cancellation Policy
             </Link>
+         
+          
           </nav>
         </div>
       </div>
