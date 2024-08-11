@@ -40,7 +40,7 @@ const styles = {
         backgroundColor: '#FFFFFF',
         height: '100vh',
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'column' as 'column',
     },
     headerLayout: {
         padding: '16px',
@@ -52,16 +52,16 @@ const styles = {
     headerTitle: {
         fontSize: '20px',
         color: '#000000',
-        fontWeight: 'bold',
+        fontWeight: 'bold' as 'bold',
     },
     scrollView: {
         padding: '16px',
-        overflowY: 'auto',  // To enable scrolling
+        overflowY: 'auto' as 'auto',  // To enable scrolling
         flex: 1,
     },
     contentLayout: {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'column' as 'column',
     },
     privacyPolicyText: {
         fontSize: '16px',

@@ -101,13 +101,13 @@ const styles = {
   },
   title: {
     fontSize: '24px',
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: 'bold' as 'bold',
+    textAlign: 'center' as 'center',
     marginBottom: '16px',
   },
   subtitle: {
     fontSize: '20px',
-    fontWeight: 'bold',
+    fontWeight: 'bold' as 'bold',
     marginBottom: '8px',
   },
   paragraph: {
